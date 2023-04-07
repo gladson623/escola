@@ -15,16 +15,9 @@ ul.cabecario li {
     padding-top: 10px;
 }
 
-ul.cabecario li a {
-    list-style: none;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-}
 
-ul.cabecario li a:hover {
-    color: rgb(255, 0, 0);
-}
+
+
 
 
 nav.container_Nav {
@@ -54,18 +47,3 @@ ul a img {
     width: 30px;
 }
 
-div.rodape ul li {
-    padding: auto;
-    color: white;
-    margin: 20px;
-    padding-top: 10px;
-    display: block;
-}
-ul li a {
-    text-decoration: none;
-
-}
-
-.pagina_atual{
-    
-}
