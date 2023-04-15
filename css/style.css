@@ -1,49 +1,11 @@
+html {
 
+    background-color: #bfbbb8;
 
-body{
-    background-color: bisque;
-    margin: 0;
-    padding: 0;
 }
 
-ul.cabecario li {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    text-align: center;
-    padding-top: 10px;
+header {
+
+    background-color: #52858a;
+
 }
-
-
-
-
-
-
-nav.container_Nav {
-    text-align: center;
-}
-
-header.cabecario {
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    height: 100px;
-}
-
-footer div.rodape {
-    color: #fff;
-    margin-top: 150px;
-    background-color: black;
-    font-family: sans-serif;
-    padding: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-ul a img {
-    height: 35px;
-    width: 30px;
-}
-
