@@ -1,5 +1,7 @@
 <?php 
 
+define("ROOT", realpath(dirname(__FILE__)));
+
 define("SITE", [
     "name" => "Colégio Cleoracy",
     "desc" => "Cleoracy",

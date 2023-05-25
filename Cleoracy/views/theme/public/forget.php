@@ -21,7 +21,7 @@
             <div class="container h-100">
                 <div class="login_form_callback"> <?=flash();?></div>
                 <div class="d-flex justify-content-center h-100" style="position: absolute;">
-                    <div class="user_card">
+                    <div class="user_card" style="left: 110%;">
                         <div class="d-flex justify-content-center">
                             <div class="brand_logo_container">
                                 <img src="views/assets/images/logo.png" class="brand_logo" alt="Logo">

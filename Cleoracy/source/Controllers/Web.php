@@ -19,7 +19,7 @@
 
             $head = $this->seo->optimize("Logue no site |", site("desc"), $this->router->route("web.login"), routeImage("Login"))->render();
 
-            echo $this->view->render("theme/login", [
+            echo $this->view->render("theme/public/login", [
                 "head" => $head
             ]);
 
@@ -35,7 +35,7 @@
             $form_user->first_name = null;
             $form_user->last_name = null;
 
-            echo $this->view->render("theme/register", [
+            echo $this->view->render("theme/public/register", [
                 "head" => $head,
                 "user" => $form_user
             ]);
@@ -46,7 +46,7 @@
 
             $head = $this->seo->optimize("Recupere sua senha |", site("desc"), $this->router->route("web.login"), routeImage("Login"))->render();
 
-            echo $this->view->render("theme/forget", [
+            echo $this->view->render("theme/public/forget", [
                 "head" => $head
             ]);
 
@@ -81,7 +81,7 @@
 
             $head = $this->seo->optimize("Crie sua nova senha |", site("desc"), $this->router->route("web.reset"), routeImage("reset"))->render();
 
-            echo $this->view->render("theme/reset", [
+            echo $this->view->render("theme/public/reset", [
                 "head" => $head
             ]);
 
@@ -109,13 +109,13 @@
 
             if($user->Verified !== "false") {
 
-                flash("error", "Este email já está !");
+                flash("error", "Este email já está verificado!");
                 $this->router->redirect("web.login");
             }
 
             $head = $this->seo->optimize("Verifique sua conta |", site("desc"), $this->router->route("web.verify"), routeImage("verify"))->render();
 
-            echo $this->view->render("theme/verify", [
+            echo $this->view->render("theme/public/verify", [
                 "head" => $head,
                 "user" => $user 
             ]);
@@ -128,7 +128,7 @@
             
             $head = $this->seo->optimize("Ooops {$error} | ".site("name"), site("desc"), $this->router->route("web.error", ["errcode" => $error]) , routeImage($error))->render();
 
-            echo $this->view->render("theme/error", [
+            echo $this->view->render("theme/error/error", [
                 "head" => $head,
                 "error" => $error
             ]);

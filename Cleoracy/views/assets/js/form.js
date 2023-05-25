@@ -15,11 +15,8 @@ $(function () {
         type: "post",
         dataType: "json",
         beforeSend: function () {
-          Swal.fire({
-            title: 'Aguarde...',
-            text: 'Processando o registro',
-            allowOutsideClick: false,
-          });
+          swal.showLoading();
+          
         },
         success: function (su) {
           Swal.close();

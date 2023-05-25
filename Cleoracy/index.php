@@ -19,7 +19,7 @@
     $router->get("/senha/{email}/{forget}", "Web:reset", "web.reset");
     $router->get("/senha/{email}/{confirm}", "Web:reset", "web.reset");
     $router->get("/verificar/{email}", "Web:verify", "web.verify");
-
+    
 
     $router->group(null);
     $router->post("/login", "Auth:login", "auth.login");
@@ -28,11 +28,22 @@
     $router->post("/reset", "Auth:reset", "auth.reset");
     $router->post("/verify", "Auth:verify", "auth.verify");
 
-    $router->group("/me");
+    $router->group("/public");
     $router->get("/", "App:home", "app.home");
+    $router->get("/galeria", "App:gallery", "app.gallery");
+    $router->get("/contato", "App:contact", "app.contact");
+    $router->get("/cardapio", "App:cardapio", "app.cardapio");
+    $router->get("/projetos/{project}", "App:projects", "app.projects");
     $router->get("/logoff", "App:logoff", "app.logoff");
 
-    $router->group("ops");
+    $router->group("/admin");
+    $router->get("/", "Admin:dashboard", "admin.dashboard");
+    $router->get("/cardapio", "Admin:cardapio", "admin.cardapio");
+
+    $router->group("/admin");
+    $router->post("/save/cardapio", "AdminAuth:saveCardapio", "auth.saveCardapio");
+
+    $router->group("error");
     $router->get("/{errcode}", "Web:error", "web.error");
 
     $router->dispatch();
